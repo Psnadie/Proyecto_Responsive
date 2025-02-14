@@ -4,9 +4,6 @@
     margin: 0;
     padding: 0;
 }
-.img_cont img{
-    max-width: 100%;
-}
 nav{
     background-color: black;
     display: flex;
@@ -30,6 +27,32 @@ nav :nth-child(2) > ul{
 }
 nav > .img_cont{
     margin: 5px;
+    min-width: 20%;
+}
+
+nav > div > .img_cont{
+    max-height: 100px;
+    min-width: 100%;
+    display: none;
+}
+nav > div > .img_cont img{
+    max-height: 100%;
+}
+@media screen and (max-width : 1007px){
+    nav > div > .img_cont{
+        max-height: 50px;
+        display: block;
+        
+    }
+    nav > div > .img_cont img{
+        float: right;
+        max-height: 100%;
+        max-width: 100%;
+    }
+    nav :nth-child(2) > ul{
+        display: none;
+        list-style: none;
+    }
 }
 .slide{
     min-width: 100vw;
